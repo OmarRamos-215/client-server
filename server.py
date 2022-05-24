@@ -1,4 +1,3 @@
-
 from flask import Flask, request
 
 app= Flask('__main__')
@@ -22,6 +21,18 @@ def set_user():
 @app.route('/users', methods=['GET'])
 def get_users():
     return users
+
+@app.route('/devices', methods=['POST'])
+def set_device():
+    device= request.json
+    print(device)
+    return device, 201
+
+@app.route('/inclination', methods=['POST'])
+def set_inclinacion():
+    device= request.json
+    print(device)
+    return device, 201
     
 
 if __name__ == '__main__':
