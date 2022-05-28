@@ -29,3 +29,4 @@ class Sensor:
         rand= randint(0, 90)
         if rand > 15:
             print(f"Advertencia, inclinación de {rand}°".center(50,'-'))
+        return rand
